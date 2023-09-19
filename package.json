@@ -1,14 +1,30 @@
 {
-    "name": "stylex-swc",
-    "version": "0.1.0",
-    "description": "",
-    "author": "",
-    "license": "ISC",
-    "keywords": ["swc-plugin"],
-    "main": "target/wasm32-wasi/release/stylex_swc.wasm",
-    "scripts": {
-        "prepublishOnly": "cargo build-wasi --release"
-    },
-    "files": [],
-    "preferUnplugged": true
+  "name": "stylex-swc",
+  "version": "0.1.0",
+  "description": "",
+  "homepage": "https://github.com/tobias-tengler/stylex-swc#readme",
+  "license": "MIT",
+  "author": {
+    "name": "Tobias Tengler",
+    "url": "https://github.com/tobias-tengler",
+    "email": "contact.tobiastengler@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tobias-tengler/stylex-swc.git"
+  },
+  "bugs": {
+    "url": "https://github.com/tobias-tengler/stylex-swc/issues"
+  },
+  "keywords": [
+    "swc-plugin",
+    "stylex",
+    "stylex-swc"
+  ],
+  "main": "./stylex_swc.wasm",
+  "scripts": {
+    "prepack": "cargo build-wasi --release && cp target/wasm32-wasi/release/stylex_swc.wasm ."
+  },
+  "files": [],
+  "preferUnplugged": true
 }
